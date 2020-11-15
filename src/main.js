@@ -1,9 +1,9 @@
 let head = document.getElementsByClassName(".conatianer");
-console.log(head);
+//console.log(head);
 
 
 let daaa =document.getElementById("book");
-console.log(daaa);
+//console.log(daaa);
 
 
 let dv1 = document.createElement("ul");
@@ -24,11 +24,15 @@ let lis2 = document.createElement("li");
 
 let text = document.querySelector('.recensione');
 console.log(text);
-text.style.display= "none";
 
+
+let p = document.createElement("p");
+p.setAttribute("class","parag");
+text.appendChild(p);
+p.style.display= "none";
 
  let info = document.createTextNode(" e uno dei megliori liberi nel mondo, aiuta a vedere il mondo del lavoro di un ponto di vista diverso, gestire la vita qutidiana in modo megliore e investire nel nostro futuro");
- text.appendChild(info);
+ p.appendChild(info);
   text.style.color = "red";
   text.style.margin = "3rem";
   text.style.padding = "3rem";
@@ -42,7 +46,7 @@ text.style.display= "none";
   btn.style.fontSize = "1rem";
 
    function divStyle(){
-     let hideShow = document.querySelector('.recensione');
+     let hideShow = document.querySelector(".parag");
 
      if (hideShow.style.display === "none") {
       hideShow.style.display= "block";
